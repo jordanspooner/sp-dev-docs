@@ -214,7 +214,7 @@ If you have applications or components, which are causing your people search req
 1. Consider if the requests are necessary for your application. For example, if you're using a custom search site, which makes many simultaneous queries, check whether some of those requests can be removed without any significant impact to your organization's search experience. Alternatively, consider trying our modern people search experience in [Microsoft Search](/microsoftsearch/get-started-search-in-sharepoint-online) by searching from the [SharePoint](http://sharepoint.com/) start page. People search in Microsoft Search has been optimized for better performance and more relevant results.
 2. Avoid making concurrent requests. For example, instead of issuing 10 requests all at once, issue them consecutively - only issue the next query after the previous one has completed. You may need to consider caching these results if you need them quickly, for example of a page load.
 3. Try consolidating the requests into a single query. For example, instead making 10 simultaneous queries for `WorkEmail:user1@constoso.com`, `WorkEmail:user2@constoso.com`,..., `WorkEmail:user10@contoso.com`, try the single query, `WorkEmail:user1@constoso.com WorkEmail:user2@constoso.com ... WorkEmail:user10@contoso.com`.
-4. Consider using the [Microsoft Graph API](/graph/people-example#search-people) if a high-request-volume scenario (in excess of 25 requests per second) is truly necessary.
+4. Consider using the [Microsoft Graph API](/graph/search-concept-person) if a high-request-volume scenario (in excess of 25 requests per second) is truly necessary.
 
 ## What should you do if you get blocked in SharePoint Online?
 
